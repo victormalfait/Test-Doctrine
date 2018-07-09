@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title><%= jurisdiction_infos.name %></title>
+</head>
+<script src="/scripts/angular.js"></script>
+<script src="/angularApp.js"></script>
+<script src="/jurisdictionCtrl.js"></script>
+<body ng-app="angApp">
+	<div>
+		<div>
+			<div ng-controller="Center as ctr">
+
+				<div>
+					<h1>
+						<%= jurisdiction_infos.name %>
+					</h1>
+					<h2 >
+						Juridiction
+					</h2>
+				</div>
+
+				<div>
+					<% if (jurisdiction_infos.commune_name) { %>
+						<div>
+							<div>
+								<span>Ville</span>
+							</div>
+							<div>
+								<span> <%= jurisdiction_infos.commune_name %> </span>
+							</div>
+						</div>
+					<% }; %>
+					<% if (jurisdiction_infos.address) { %>
+						<div>
+							<div>
+								<span>Adresse</span>
+							</div>
+							<div>
+								<span> <%= jurisdiction_infos.address %> </span>
+							</div>
+						</div>
+					<% }; %>
+					<div ng-show="ctr.jurisdictionContactInfos.telephone.length > 0">
+						<div>
+							<span>Téléphone</span>
+							<span ng-show="ctr.jurisdictionContactInfos.telephone.length > 1">s</span>
+						</div>
+						<div ng-repeat="item in ctr.jurisdictionContactInfos.telephone">
+					    <span> {{ item.data }} </span>
+							<span ng-if="item.verified"> *Vérifié*</span>
+						</div>
+					</div>
+					<div ng-show="ctr.jurisdictionContactInfos.fax.length > 0">
+						<div>
+							<span>Fax</span>
+						</div>
+						<div ng-repeat="item in ctr.jurisdictionContactInfos.fax">
+					    <span> {{ item.data }} </span>
+							<span ng-if="item.verified"> *Vérifié*</span>
+						</div>
+					</div>
+					<div ng-show="ctr.jurisdictionContactInfos.email.length > 0">
+						<div>
+							<span>Email</span>
+							<span ng-show="ctr.jurisdictionContactInfos.email.length > 1">s</span>
+						</div>
+						<div ng-repeat="item in ctr.jurisdictionContactInfos.email">
+					    <span>{{ item.data }} </span>
+							<span ng-if="item.verified"> *Vérifié*</span>
+						</div>
+					</div>
+					<div ng-show="ctr.jurisdictionTopDecisions.length > 0">
+						<div>
+							<span>Top decisions</span>
+							<span ng-show="ctr.jurisdictionTopDecisions.length > 1">s</span>
+						</div>
+						<div ng-repeat="item in ctr.jurisdictionTopDecisions">
+					    <a ng-href="{{ item.url }}">{{ item.title }} </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var jurisdiction_id = <%- JSON.stringify(jurisdiction_infos.jurisdiction_id) %>;
+			var jurisdiction_name = <%- JSON.stringify(jurisdiction_infos.name) %>;
+		</script>
+	</div>
+</body> <!-- main controller end  -->
+
+</html>
