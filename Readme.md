@@ -52,6 +52,7 @@ Every page should display at least decision title and decision content.
 - You can add anything you want to improve your final work. A lot of extra things can be done, like cleaning the decisions pages HTML for example. Any extra work will be evaluated as bonuses. Be aware that this extra work should follow the same guidelines as the rest of your code. If it makes the server crash sometimes, it will be penalized. Be creative !
 - Pages loading should be as fast as possible.
 - Frontend will not be evaluated. But you can still impress us.
+- In any case the install instructions in this README file should always be valid. You can update this file if necessary if the install and running instructions have changed.
 
 *Installation:*
   - Install `sqlite`:
