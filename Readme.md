@@ -4,7 +4,7 @@ Purpose of this test is to evaluate your ability to produce a good backend code 
 
 * 1st Objective: we want to display contact informations on a jurisdiction page.
 
-We have some informations which are sourced from jurisdictions websites. They can be found on `jurisdiction` table. We also have verified ones which we know for sure to be correct. So for each contact information type, we want to display all the distinct items we have and if this info is verified or not.
+We have some informations which are sourced from jurisdictions websites. They can be found on `jurisdiction` table. We also have verified ones which we know for sure to be correct. You can find it on `jurisdictions_verified_contact_infos` table. So for each contact information type, we want to display all the distinct items we have and if this info is verified or not.
 
 The endpoint is already present and you can code what you need to achieve this purpose in `controllers/getJurisdictionContactInfos`.
 
@@ -47,7 +47,7 @@ Every page should display at least decision title and decision content.
 - Code must be in Node.js.
 - Time to finish this test is not limited.
 - You must prevent server from sending 500 errors. Error cases should be correctly handled.
-- Feel free to create or modify any table in the sqlite database. However, we won't test your work with your database so you need to provide a script to modify our own accordingly.
+- Feel free to create or modify any table in the sqlite database. However, we won't test your work with your database so you need to provide a script to modify our own accordingly or to update the installation script.
 - Everything you make should be tested with the test suite of your choice.
 - You can add anything you want to improve your final work. A lot of extra things can be done, like cleaning the decisions pages HTML for example. Any extra work will be evaluated as bonuses. Be aware that this extra work should follow the same guidelines as the rest of your code. If it makes the server crash sometimes, it will be penalized. Be creative !
 - Pages loading should be as fast as possible.
