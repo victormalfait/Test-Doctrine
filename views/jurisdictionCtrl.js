@@ -7,4 +7,12 @@ angular.module("angApp")
   }, function(res) {
     throw new Error('Something went wront in jurisdiction contact infos query')
   })
+  if (jurisdiction_id === 'JUR359D88F9B71718E7F4A6') {
+    $http.get('/getJurisdictionTopDecisions')
+      .then(function(res) {
+        cr.jurisdictionTopDecisions = angular.fromJson(res.data)
+      }, function(res) {
+        throw new Error('Something went wront in jurisdiction contact infos query')
+      })
+  }
 })
