@@ -6,17 +6,189 @@
 </head>
 <script src="/scripts/angular.js"></script>
 <script src="/angularApp.js"></script>
-<script src="/jurisdictionCtrl.js"></script>
 <body ng-app="angApp">
-<div>
     <div>
-        <div ng-controller="Center as ctr">
-
+        <h1><%= decision_infos.title %></h1>
+    </div>
+    <% if (decision_infos.formation) { %>
+        <div>
             <div>
-                <h1><%= decision_infos.title %></h1>
+                <h4>Formation</h4>
+            </div>
+            <div>
+                <span> <%= decision_infos.formation %> </span>
             </div>
         </div>
-    </div>
-</div>
+    <% }; %>
+    <% if (decision_infos.president) { %>
+        <div>
+            <div>
+                <h4>President</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.president %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.gl_lawyer) { %>
+        <div>
+            <div>
+                <h4>GL Lawyer</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.gl_lawyer %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.lawyers) { %>
+        <div>
+            <div>
+                <h4>Lawyer</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.lawyers %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.jp_quotation) { %>
+        <div>
+            <div>
+                <h4>JP Quotation</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.jp_quotation %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.ana_summary) { %>
+        <div>
+            <div>
+                <h4>ANA Summary</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.ana_summary %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.links) { %>
+        <div>
+            <div>
+                <h4>Links</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.links %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.number) { %>
+        <div>
+            <div>
+                <h4>Number</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.number %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.case_number) { %>
+        <div>
+            <div>
+                <h4>Case number</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.case_number %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.solution) { %>
+        <div>
+            <div>
+                <h4>Solution</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.solution %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.dec_date) { %>
+        <div>
+            <div>
+                <h4>Decision date</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.dec_date %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.att_dec_date) { %>
+        <div>
+            <div>
+                <h4>Att decision date</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.att_dec_date %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.html_content) { %>
+        <div>
+            <div>
+                <h4>Content</h4>
+            </div>
+            <div>
+                <span><%- decision_infos.html_content %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.jurisdiction) { %>
+        <div>
+            <div>
+                <h4>Jurisdiction</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.jurisdiction %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.publi_bull) { %>
+        <div>
+            <div>
+                <h4>Publi bull</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.publi_bull %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.ecli) { %>
+        <div>
+            <div>
+                <h4>Ecli</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.ecli %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.gvt_commissary) { %>
+        <div>
+            <div>
+                <h4>GVT commissary</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.gvt_commissary %></span>
+            </div>
+        </div>
+    <% }; %>
+    <% if (decision_infos.rec_type) { %>
+        <div>
+            <div>
+                <h4>Rec type</h4>
+            </div>
+            <div>
+                <span><%= decision_infos.rec_type %></span>
+            </div>
+        </div>
+    <% }; %>
 </body>
 </html>

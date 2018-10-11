@@ -4,7 +4,7 @@ const contact_key = ['telephone', 'fax', 'email'];
 module.exports = function getJurisdictionContactInfos(req, res, next) {
   let jurisdiction_id = req.query.jurisdiction_id
   let contact_infos = Object.create(null)
-  getJuridiction(jurisdiction_id, (data, err) => {
+  getJurisdiction(jurisdiction_id, (data, err) => {
     if (err) return next(err)
     contact_infos = data;
 
@@ -20,7 +20,7 @@ module.exports = function getJurisdictionContactInfos(req, res, next) {
   })
 }
 
-function getJuridiction (jurisdiction_id, callback) {
+function getJurisdiction (jurisdiction_id, callback) {
   let tab = Object.create(null);
   db.get(`
     SELECT  *
